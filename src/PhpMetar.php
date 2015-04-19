@@ -52,8 +52,8 @@ class PhpMetar {
     }
   }
 
-  public static function testMe() {
-    echo 'Testing...';
+  public function testMe() {
+    return 'Testing...';
   }
 }
 
