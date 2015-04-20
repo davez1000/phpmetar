@@ -16,11 +16,21 @@ class Icao
     
   }
 
+  /**
+   *
+   */
   public function getRegex() {
     return '#^([A-Z0-9]{4}) #';
   }
 
-  public function parse() {
-
+  /**
+   *
+   */
+  public function parse($metar) {
+    $regex = $this->getRegex();
+    if (preg_match($regex, $metar)) {
+      return 'matches';
+    }
   }
+
 }
